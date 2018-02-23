@@ -1,0 +1,2223 @@
+API_KEY = a4babd56b1912e0997aac0a3561c56f1
+
+API_DEMO_URL = https://api.themoviedb.org/3/movie/550?api_key=a4babd56b1912e0997aac0a3561c56f1 <- by giving id of the movie.
+
+https://api.themoviedb.org/3/search/movie?api_key=a4babd56b1912e0997aac0a3561c56f1&query=whiplash <- by appending the query.
+
+https://api.themoviedb.org/3/search/movie?api_key=a4babd56b1912e0997aac0a3561c56f1&query=whiplash&language=de-DE&region=DE <- Getting in a specific language.
+
+https://api.themoviedb.org/3/movie/157336?api_key=a4babd56b1912e0997aac0a3561c56f1&append_to_response=videos,images <- Getting the videos and images also.
+
+
+Standard Way:
+
+Search :
+https://api.themoviedb.org/3/search/movie?api_key=a4babd56b1912e0997aac0a3561c56f1&query=Game+of+Thrones
+
+
+Query for Details:
+
+https://api.themoviedb.org/3/movie/492606?api_key=a4babd56b1912e0997aac0a3561c56f1&append_to_response=videos
+
+{
+    adult: false,
+    backdrop_path: "/masCZracUmRKVDFovPoFo9ePNry.jpg",
+    belongs_to_collection: null,
+    budget: 0,
+    genres: [
+    {
+    id: 16,
+    name: "Animation"
+    },
+    {
+    id: 14,
+    name: "Fantasy"
+    }
+    ],
+    homepage: "",
+    id: 492606,
+    imdb_id: "tt7937220",
+    original_language: "en",
+    original_title: "Game of Thrones: Conquest & Rebellion",
+    overview: "HBO's animated history of Westeros brings to life all the events that shaped the Seven Kingdoms in the thousands of years before Game of Thrones' story begins.",
+    popularity: 7.094597,
+    poster_path: "/3EanTe9yClVB89JKlyxKd3GVFtx.jpg",
+    production_companies: [
+    {
+    name: "HBO",
+    id: 6068
+    }
+    ],
+    production_countries: [
+    {
+    iso_3166_1: "US",
+    name: "United States of America"
+    }
+    ],
+    release_date: "2017-12-12",
+    revenue: 0,
+    runtime: 45,
+    spoken_languages: [
+    {
+    iso_639_1: "en",
+    name: "English"
+    }
+    ],
+    status: "Released",
+    tagline: "",
+    title: "Game of Thrones: Conquest & Rebellion",
+    video: false,
+    vote_average: 6.9,
+    vote_count: 8,
+    videos: {
+    results: [
+    {
+    id: "5a31fdd8925141547200dc60",
+    iso_639_1: "en",
+    iso_3166_1: "US",
+    key: "Uc32z-wgxU4",
+    name: "Chapter One / Valyria’s Last Scion: House Targaryen",
+    site: "YouTube",
+    size: 1080,
+    type: "Clip"
+    }
+    ]
+    }
+}
+
+Creating a Guest Session:
+
+https://api.themoviedb.org/3/authentication/guest_session/new?api_key=a4babd56b1912e0997aac0a3561c56f1
+
+Response:
+{
+  "success": true,
+  "guest_session_id": "999d3a950a568e1a2ae6865d179b969b",
+  "expires_at": "2018-02-09 10:49:34 UTC"
+}
+
+
+
+ID For Movies = http://files.tmdb.org/p/exports/movie_ids_02_08_2018.json.gz
+
+Translate the content = https://api.themoviedb.org/3/movie/550?api_key=a4babd56b1912e0997aac0a3561c56f1&language=de 
+
+To Get API Configuration 
+https://api.themoviedb.org/3/configuration?api_key=a4babd56b1912e0997aac0a3561c56f1
+
+Response
+{
+  "images": {
+    "base_url": "http://image.tmdb.org/t/p/",
+    "secure_base_url": "https://image.tmdb.org/t/p/",
+    "backdrop_sizes": [
+      "w300",
+      "w780",
+      "w1280",
+      "original"
+    ],
+    "logo_sizes": [
+      "w45",
+      "w92",
+      "w154",
+      "w185",
+      "w300",
+      "w500",
+      "original"
+    ],
+    "poster_sizes": [
+      "w92",
+      "w154",
+      "w185",
+      "w342",
+      "w500",
+      "w780",
+      "original"
+    ],
+    "profile_sizes": [
+      "w45",
+      "w185",
+      "h632",
+      "original"
+    ],
+    "still_sizes": [
+      "w92",
+      "w185",
+      "w300",
+      "original"
+    ]
+  },
+  "change_keys": [
+    "adult",
+    "air_date",
+    "also_known_as",
+    "alternative_titles",
+    "biography",
+    "birthday",
+    "budget",
+    "cast",
+    "certifications",
+    "character_names",
+    "created_by",
+    "crew",
+    "deathday",
+    "episode",
+    "episode_number",
+    "episode_run_time",
+    "freebase_id",
+    "freebase_mid",
+    "general",
+    "genres",
+    "guest_stars",
+    "homepage",
+    "images",
+    "imdb_id",
+    "languages",
+    "name",
+    "network",
+    "origin_country",
+    "original_name",
+    "original_title",
+    "overview",
+    "parts",
+    "place_of_birth",
+    "plot_keywords",
+    "production_code",
+    "production_companies",
+    "production_countries",
+    "releases",
+    "revenue",
+    "runtime",
+    "season",
+    "season_number",
+    "season_regular",
+    "spoken_languages",
+    "status",
+    "tagline",
+    "title",
+    "translations",
+    "tvdb_id",
+    "tvrage_id",
+    "type",
+    "video",
+    "videos"
+  ]
+}
+
+Example of obtaining a Image : https://image.tmdb.org/t/p/ <- Base
+w1280 <- backdrop size
+/87hTDiay2N2qWyX4Ds7ybXi9h8I.jpg <- backdrop_path
+
+Get Certificate Information
+
+https://api.themoviedb.org/3/certification/tv/list?api_key=a4babd56b1912e0997aac0a3561c56f1
+
+https://api.themoviedb.org/3/certification/movie/list?api_key=a4babd56b1912e0997aac0a3561c56f1
+
+
+Company Details
+
+https://api.themoviedb.org/3/company/6068?api_key=a4babd56b1912e0997aac0a3561c56f1
+
+{
+  "description": null,
+  "headquarters": null,
+  "homepage": null,
+  "id": 6068,
+  "logo_path": "/gd1CU1ojS6QW5uJSp8q04mBsIfF.png",
+  "name": "HBO",
+  "parent_company": null
+}
+
+IMDB Information
+
+https://api.themoviedb.org/3/find/tt7937220?api_key=a4babd56b1912e0997aac0a3561c56f1&language=en-US&external_source=imdb_id
+
+tt7937220 is imdb_id
+After movie is imdb id.
+
+Discover
+
+https://api.themoviedb.org/3/discover/movie?api_key=a4babd56b1912e0997aac0a3561c56f1&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1  
+
+https://api.themoviedb.org/3/discover/tv?api_key=a4babd56b1912e0997aac0a3561c56f1&language=en-US&sort_by=popularity.desc&page=1&timezone=America%2FNew_York&include_null_first_air_dates=false
+
+Visit this link for additional params
+https://developers.themoviedb.org/3/discover/movie-discover
+
+
+Get the genres
+https://api.themoviedb.org/3/genre/movie/list?api_key=a4babd56b1912e0997aac0a3561c56f1&language=en-US
+
+{
+  "genres": [
+    {
+      "id": 28,
+      "name": "Action"
+    },
+    {
+      "id": 12,
+      "name": "Adventure"
+    },
+    {
+      "id": 16,
+      "name": "Animation"
+    },
+    {
+      "id": 35,
+      "name": "Comedy"
+    },
+    {
+      "id": 80,
+      "name": "Crime"
+    },
+    {
+      "id": 99,
+      "name": "Documentary"
+    },
+    {
+      "id": 18,
+      "name": "Drama"
+    },
+    {
+      "id": 10751,
+      "name": "Family"
+    },
+    {
+      "id": 14,
+      "name": "Fantasy"
+    },
+    {
+      "id": 36,
+      "name": "History"
+    },
+    {
+      "id": 27,
+      "name": "Horror"
+    },
+    {
+      "id": 10402,
+      "name": "Music"
+    },
+    {
+      "id": 9648,
+      "name": "Mystery"
+    },
+    {
+      "id": 10749,
+      "name": "Romance"
+    },
+    {
+      "id": 878,
+      "name": "Science Fiction"
+    },
+    {
+      "id": 10770,
+      "name": "TV Movie"
+    },
+    {
+      "id": 53,
+      "name": "Thriller"
+    },
+    {
+      "id": 10752,
+      "name": "War"
+    },
+    {
+      "id": 37,
+      "name": "Western"
+    }
+  ]
+}
+
+get Tv list genres
+https://api.themoviedb.org/3/genre/tv/list?api_key=a4babd56b1912e0997aac0a3561c56f1&language=en-US
+
+{
+  "genres": [
+    {
+      "id": 10759,
+      "name": "Action & Adventure"
+    },
+    {
+      "id": 16,
+      "name": "Animation"
+    },
+    {
+      "id": 35,
+      "name": "Comedy"
+    },
+    {
+      "id": 80,
+      "name": "Crime"
+    },
+    {
+      "id": 99,
+      "name": "Documentary"
+    },
+    {
+      "id": 18,
+      "name": "Drama"
+    },
+    {
+      "id": 10751,
+      "name": "Family"
+    },
+    {
+      "id": 10762,
+      "name": "Kids"
+    },
+    {
+      "id": 9648,
+      "name": "Mystery"
+    },
+    {
+      "id": 10763,
+      "name": "News"
+    },
+    {
+      "id": 10764,
+      "name": "Reality"
+    },
+    {
+      "id": 10765,
+      "name": "Sci-Fi & Fantasy"
+    },
+    {
+      "id": 10766,
+      "name": "Soap"
+    },
+    {
+      "id": 10767,
+      "name": "Talk"
+    },
+    {
+      "id": 10768,
+      "name": "War & Politics"
+    },
+    {
+      "id": 37,
+      "name": "Western"
+    }
+  ]
+}
+
+
+Get Movies rated by guest
+https://api.themoviedb.org/3/guest_session/999d3a950a568e1a2ae6865d179b969b/rated/movies?api_key=a4babd56b1912e0997aac0a3561c56f1&language=en-US&sort_by=created_at.asc
+
+tv
+https://api.themoviedb.org/3/guest_session/999d3a950a568e1a2ae6865d179b969b/rated/tv?api_key=a4babd56b1912e0997aac0a3561c56f1&language=en-US&sort_by=created_at.asc
+
+
+tv episode
+https://api.themoviedb.org/3/guest_session/999d3a950a568e1a2ae6865d179b969b/rated/tv/episodes?api_key=a4babd56b1912e0997aac0a3561c56f1&language=en-US&sort_by=created_at.asc
+
+
+search companies 
+https://api.themoviedb.org/3/search/company?api_key=a4babd56b1912e0997aac0a3561c56f1&query=HBO&page=1
+
+query = your query
+
+Visit this link:
+
+https://developers.themoviedb.org/3/search/search-companies
+
+this will give all the ids of Companies , Collection , keyword , movies , people , tv show , multi search
+
+
+Company:
+
+https://api.themoviedb.org/3/search/company?api_key=a4babd56b1912e0997aac0a3561c56f1&query=Paramount&page=1
+
+Response:
+
+{
+  "page": 1,
+  "results": [
+    {
+      "id": 6033,
+      "logo_path": null,
+      "name": "Paramount"
+    },
+    {
+      "id": 838,
+      "logo_path": null,
+      "name": "Paramount Vantage"
+    },
+    {
+      "id": 4,
+      "logo_path": "/3S3SJqc58bdZEVeMcbdbsFNyPz5.png",
+      "name": "Paramount Pictures"
+    },
+    {
+      "id": 2315,
+      "logo_path": null,
+      "name": "Paramount Classics"
+    },
+    {
+      "id": 6641,
+      "logo_path": null,
+      "name": "paramount pictures"
+    },
+    {
+      "id": 9223,
+      "logo_path": null,
+      "name": "Paramount Television"
+    },
+    {
+      "id": 19541,
+      "logo_path": null,
+      "name": "Paramount Filmproduction"
+    },
+    {
+      "id": 24955,
+      "logo_path": null,
+      "name": "Paramount Animation"
+    },
+    {
+      "id": 96540,
+      "logo_path": null,
+      "name": "Paramount Players"
+    },
+    {
+      "id": 3861,
+      "logo_path": null,
+      "name": "Paramount Film Service"
+    },
+    {
+      "id": 1446,
+      "logo_path": null,
+      "name": "Paramount Network Television"
+    },
+    {
+      "id": 6248,
+      "logo_path": null,
+      "name": "Paramount Pictures France"
+    },
+    {
+      "id": 6548,
+      "logo_path": null,
+      "name": "Paramount Home Entertainment"
+    },
+    {
+      "id": 7047,
+      "logo_path": null,
+      "name": "Paramount Pictures Corporation"
+    },
+    {
+      "id": 8155,
+      "logo_path": null,
+      "name": "Paramount Home Video"
+    },
+    {
+      "id": 8913,
+      "logo_path": null,
+      "name": "Paramount British Pictures"
+    },
+    {
+      "id": 33333,
+      "logo_path": null,
+      "name": "Paramount Famous Lasky Corporation"
+    },
+    {
+      "id": 12224,
+      "logo_path": null,
+      "name": "Paramount Network Television Productions"
+    },
+    {
+      "id": 21834,
+      "logo_path": null,
+      "name": "Paramount Pictures Digital Entertainment"
+    },
+    {
+      "id": 27647,
+      "logo_path": null,
+      "name": "Les Films Paramount"
+    }
+  ],
+  "total_pages": 2,
+  "total_results": 29
+}
+
+E.g id is 6033
+
+Get Company ddetails by
+
+https://api.themoviedb.org/3/company/6033?api_key=a4babd56b1912e0997aac0a3561c56f1
+
+Response;
+
+{
+  "description": null,
+  "headquarters": null,
+  "homepage": null,
+  "id": 6033,
+  "logo_path": null,
+  "name": "Paramount",
+  "parent_company": null
+}
+
+
+Search Collection
+
+https://api.themoviedb.org/3/search/collection?api_key=a4babd56b1912e0997aac0a3561c56f1&language=en-US&query=harry%20potter&page=1
+
+Response
+
+{
+  "page": 1,
+  "results": [
+    {
+      "id": 1241,
+      "backdrop_path": "/wfnMt6LGqYHcNyOfsuusw5lX3bL.jpg",
+      "name": "Harry Potter Collection",
+      "poster_path": "/eVPs2Y0LyvTLZn6AP5Z6O2rtiGB.jpg"
+    }
+  ],
+  "total_pages": 1,
+  "total_results": 1
+}
+
+
+collection id is 1241
+
+https://api.themoviedb.org/3/collection/1241?api_key=a4babd56b1912e0997aac0a3561c56f1&language=en-US
+
+Response is 
+
+{
+  "id": 1241,
+  "name": "Harry Potter Collection",
+  "overview": "The Harry Potter films are a fantasy series based on the series of seven Harry Potter novels by British writer J. K. Rowling.",
+  "poster_path": "/eVPs2Y0LyvTLZn6AP5Z6O2rtiGB.jpg",
+  "backdrop_path": "/wfnMt6LGqYHcNyOfsuusw5lX3bL.jpg",
+  "parts": [
+    {
+      "adult": false,
+      "backdrop_path": "/fUjPnCmmBVHLNdgz2sqb1zp39Pr.jpg",
+      "genre_ids": [
+        12,
+        14,
+        10751
+      ],
+      "id": 671,
+      "original_language": "en",
+      "original_title": "Harry Potter and the Philosopher's Stone",
+      "overview": "Harry Potter has lived under the stairs at his aunt and uncle's house his whole life. But on his 11th birthday, he learns he's a powerful wizard -- with a place waiting for him at the Hogwarts School of Witchcraft and Wizardry. As he learns to harness his newfound powers with the help of the school's kindly headmaster, Harry uncovers the truth about his parents' deaths -- and about the villain who's to blame.",
+      "release_date": "2001-11-16",
+      "poster_path": "/dCtFvscYcXQKTNvyyaQr2g2UacJ.jpg",
+      "popularity": 63.935617,
+      "title": "Harry Potter and the Philosopher's Stone",
+      "video": false,
+      "vote_average": 7.6,
+      "vote_count": 8436
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/2grHB4caPBmOyDW9x7NAwldtk8Y.jpg",
+      "genre_ids": [
+        12,
+        14,
+        10751
+      ],
+      "id": 672,
+      "original_language": "en",
+      "original_title": "Harry Potter and the Chamber of Secrets",
+      "overview": "Ignoring threats to his life, Harry returns to Hogwarts to investigate – aided by Ron and Hermione – a mysterious series of attacks.",
+      "release_date": "2002-11-13",
+      "poster_path": "/sdEOH0992YZ0QSxgXNIGLq1ToUi.jpg",
+      "popularity": 53.964491,
+      "title": "Harry Potter and the Chamber of Secrets",
+      "video": false,
+      "vote_average": 7.5,
+      "vote_count": 7177
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/gzKW3emulMxIHzuXxZoyDB1lei9.jpg",
+      "genre_ids": [
+        12,
+        14,
+        10751
+      ],
+      "id": 674,
+      "original_language": "en",
+      "original_title": "Harry Potter and the Goblet of Fire",
+      "overview": "Harry starts his fourth year at Hogwarts, competes in the treacherous Triwizard Tournament and faces the evil Lord Voldemort. Ron and Hermione help Harry manage the pressure – but Voldemort lurks, awaiting his chance to destroy Harry and all that he stands for.",
+      "release_date": "2005-11-16",
+      "poster_path": "/6sASqcdrEHXxUhA3nFpjrRecPD2.jpg",
+      "popularity": 49.852422,
+      "title": "Harry Potter and the Goblet of Fire",
+      "video": false,
+      "vote_average": 7.6,
+      "vote_count": 6822
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/kRyojLYtWPsBKfDhphhhl1FdM5a.jpg",
+      "genre_ids": [
+        12,
+        14,
+        10751
+      ],
+      "id": 767,
+      "original_language": "en",
+      "original_title": "Harry Potter and the Half-Blood Prince",
+      "overview": "As Harry begins his sixth year at Hogwarts, he discovers an old book marked as 'Property of the Half-Blood Prince', and begins to learn more about Lord Voldemort's dark past.",
+      "release_date": "2009-07-07",
+      "poster_path": "/bFXys2nhALwDvpkF3dP3Vvdfn8b.jpg",
+      "popularity": 53.787043,
+      "title": "Harry Potter and the Half-Blood Prince",
+      "video": false,
+      "vote_average": 7.5,
+      "vote_count": 6490
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/wWdlIBxn9xCmySxnSWtI2BjZZkF.jpg",
+      "genre_ids": [
+        12,
+        14,
+        10751
+      ],
+      "id": 673,
+      "original_language": "en",
+      "original_title": "Harry Potter and the Prisoner of Azkaban",
+      "overview": "Harry, Ron and Hermione return to Hogwarts for another magic-filled year. Harry comes face to face with danger yet again, this time in the form of escaped convict, Sirius Black – and turns to sympathetic Professor Lupin for help.",
+      "release_date": "2004-05-31",
+      "poster_path": "/jUFjMoLh8T2CWzHUSjKCojI5SHu.jpg",
+      "popularity": 47.86798,
+      "title": "Harry Potter and the Prisoner of Azkaban",
+      "video": false,
+      "vote_average": 7.7,
+      "vote_count": 7145
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/gGt4ePOhD8ilxd3FYhKB06L2CyG.jpg",
+      "genre_ids": [
+        12,
+        14,
+        10751,
+        9648
+      ],
+      "id": 675,
+      "original_language": "en",
+      "original_title": "Harry Potter and the Order of the Phoenix",
+      "overview": "Returning for his fifth year of study at Hogwarts, Harry is stunned to find that his warnings about the return of Lord Voldemort have been ignored. Left with no choice, Harry takes matters into his own hands, training a small group of students – dubbed 'Dumbledore's Army' – to defend themselves against the dark arts.",
+      "release_date": "2007-06-28",
+      "poster_path": "/4YnLxYLHhT4UQ8i9jxAXWy46Xuw.jpg",
+      "popularity": 60.536345,
+      "title": "Harry Potter and the Order of the Phoenix",
+      "video": false,
+      "vote_average": 7.4,
+      "vote_count": 6635
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/8YA36faYlkpfp6aozcGsqq68pZ9.jpg",
+      "genre_ids": [
+        12,
+        14,
+        10751
+      ],
+      "id": 12444,
+      "original_language": "en",
+      "original_title": "Harry Potter and the Deathly Hallows: Part 1",
+      "overview": "Harry, Ron and Hermione walk away from their last year at Hogwarts to find and destroy the remaining Horcruxes, putting an end to Voldemort's bid for immortality. But with Harry's beloved Dumbledore dead and Voldemort's unscrupulous Death Eaters on the loose, the world is more dangerous than ever.",
+      "release_date": "2010-10-17",
+      "poster_path": "/maP4MTfPCeVD2FZbKTLUgriOW4R.jpg",
+      "popularity": 40.58814,
+      "title": "Harry Potter and the Deathly Hallows: Part 1",
+      "video": false,
+      "vote_average": 7.6,
+      "vote_count": 6667
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/6n0DAcyjTHS6888mt8U9ZsLy9nR.jpg",
+      "genre_ids": [
+        10751,
+        14,
+        12
+      ],
+      "id": 12445,
+      "original_language": "en",
+      "original_title": "Harry Potter and the Deathly Hallows: Part 2",
+      "overview": "Harry, Ron and Hermione continue their quest to vanquish the evil Voldemort once and for all. Just as things begin to look hopeless for the young wizards, Harry discovers a trio of magical objects that endow him with powers to rival Voldemort's formidable skills.",
+      "release_date": "2011-07-07",
+      "poster_path": "/fTplI1NCSuEDP4ITLcTps739fcC.jpg",
+      "popularity": 69.271219,
+      "title": "Harry Potter and the Deathly Hallows: Part 2",
+      "video": false,
+      "vote_average": 7.9,
+      "vote_count": 7314
+    }
+  ]
+}
+
+Keyword:
+
+https://api.themoviedb.org/3/search/keyword?api_key=a4babd56b1912e0997aac0a3561c56f1&query=car&page=1
+
+Response
+{
+  "page": 1,
+  "results": [
+    {
+      "id": 33885,
+      "name": "car"
+    },
+    {
+      "id": 1874,
+      "name": "car dealer"
+    },
+    {
+      "id": 1927,
+      "name": "car breakdown"
+    },
+    {
+      "id": 4242,
+      "name": "car dealing"
+    },
+    {
+      "id": 915,
+      "name": "car thief"
+    },
+    {
+      "id": 830,
+      "name": "car race"
+    },
+    {
+      "id": 999,
+      "name": "sports car"
+    },
+    {
+      "id": 10729,
+      "name": "car salesman"
+    },
+    {
+      "id": 11856,
+      "name": "overturning car"
+    },
+    {
+      "id": 13063,
+      "name": "car accident"
+    },
+    {
+      "id": 7067,
+      "name": "getaway car"
+    },
+    {
+      "id": 6363,
+      "name": "racing car"
+    },
+    {
+      "id": 4898,
+      "name": "armored car"
+    },
+    {
+      "id": 5339,
+      "name": "railway car"
+    },
+    {
+      "id": 7336,
+      "name": "car bomb"
+    },
+    {
+      "id": 1926,
+      "name": "car journey"
+    },
+    {
+      "id": 3531,
+      "name": "special car"
+    },
+    {
+      "id": 3545,
+      "name": "tank car"
+    },
+    {
+      "id": 9844,
+      "name": "car crash"
+    },
+    {
+      "id": 3296,
+      "name": "car mechanic"
+    }
+  ],
+  "total_pages": 18,
+  "total_results": 348
+}
+
+Id is 33885
+
+https://api.themoviedb.org/3/keyword/33885?api_key=a4babd56b1912e0997aac0a3561c56f1
+get keyword from id
+
+Get suggestions from keyword
+
+https://api.themoviedb.org/3/keyword/33885/movies?api_key=a4babd56b1912e0997aac0a3561c56f1&language=en-US&include_adult=false
+
+
+{
+  "id": 33885,
+  "page": 1,
+  "results": [
+    {
+      "adult": false,
+      "backdrop_path": "/goCvLSUFz0p7k8R10Hv4CVh3EQv.jpg",
+      "genre_ids": [
+        28,
+        80
+      ],
+      "id": 339403,
+      "original_language": "en",
+      "original_title": "Baby Driver",
+      "overview": "After being coerced into working for a crime boss, a young getaway driver finds himself taking part in a heist doomed to fail.",
+      "release_date": "2017-06-28",
+      "poster_path": "/dN9LbVNNZFITwfaRjl4tmwGWkRg.jpg",
+      "popularity": 174.764239,
+      "title": "Baby Driver",
+      "video": false,
+      "vote_average": 7.3,
+      "vote_count": 3822
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/ypyeMfKydpyuuTMdp36rMlkGDUL.jpg",
+      "genre_ids": [
+        28,
+        80,
+        53
+      ],
+      "id": 168259,
+      "original_language": "en",
+      "original_title": "Furious 7",
+      "overview": "Deckard Shaw seeks revenge against Dominic Toretto and his family for his comatose brother.",
+      "release_date": "2015-04-01",
+      "poster_path": "/dCgm7efXDmiABSdWDHBDBx2jwmn.jpg",
+      "popularity": 83.010727,
+      "title": "Furious 7",
+      "video": false,
+      "vote_average": 7.2,
+      "vote_count": 4801
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/kiLEAfRQhs93r3tSsQFpD2EpbyR.jpg",
+      "genre_ids": [
+        28,
+        80,
+        18,
+        53
+      ],
+      "id": 136797,
+      "original_language": "en",
+      "original_title": "Need for Speed",
+      "overview": "The film revolves around a local street-racer who partners with a rich and arrogant business associate, only to find himself framed by his colleague and sent to prison. After he gets out, he joins a New York-to-Los Angeles race to get revenge. But when the ex-partner learns of the scheme, he puts a massive bounty on the racer's head, forcing him to run a cross-country gauntlet of illegal racers in all manner of supercharged vehicles.",
+      "release_date": "2014-03-13",
+      "poster_path": "/lN0mP3BNaKirkKl6FJ0yL0wmjSJ.jpg",
+      "popularity": 47.049296,
+      "title": "Need for Speed",
+      "video": false,
+      "vote_average": 6.1,
+      "vote_count": 1730
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/bDdVZNvxb670EMlZqeIy6RdyJ4V.jpg",
+      "genre_ids": [
+        12,
+        28,
+        53
+      ],
+      "id": 955,
+      "original_language": "en",
+      "original_title": "Mission: Impossible II",
+      "overview": "With computer genius Luther Stickell at his side and a beautiful thief on his mind, agent Ethan Hunt races across Australia and Spain to stop a former IMF agent from unleashing a genetically engineered biological weapon called Chimera. This mission, should Hunt choose to accept it, plunges him into the center of an international crisis of terrifying magnitude.",
+      "release_date": "2000-05-24",
+      "poster_path": "/eRaEC0vf5q5TSvaoJPwGTt2wa9T.jpg",
+      "popularity": 39.032694,
+      "title": "Mission: Impossible II",
+      "video": false,
+      "vote_average": 5.9,
+      "vote_count": 2273
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/cYd3PL27r0KJa9Pa4A5lfUr58Yg.jpg",
+      "genre_ids": [
+        14,
+        27,
+        28
+      ],
+      "id": 924,
+      "original_language": "en",
+      "original_title": "Dawn of the Dead",
+      "overview": "A group of surviving people take refuge in a shopping center after the world has been over taken over by aggressive, flesh-eating zombies. A remake of the 1978 zombie film of the same name.",
+      "release_date": "2004-03-19",
+      "poster_path": "/yfqsgzW6AQYmBjIEIq0y9EB1Rgl.jpg",
+      "popularity": 28.204944,
+      "title": "Dawn of the Dead",
+      "video": false,
+      "vote_average": 6.8,
+      "vote_count": 1254
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/f2fFY79HLf8FadJwoxHxuHN7Bzn.jpg",
+      "genre_ids": [
+        18
+      ],
+      "id": 13223,
+      "original_language": "en",
+      "original_title": "Gran Torino",
+      "overview": "Walt Kowalski is a widower who holds onto his prejudices despite the changes in his Michigan neighborhood and the world around him. Kowalski is a grumpy, tough-minded, unhappy old man who can't get along with either his kids or his neighbors. He is a Korean War veteran whose prize possession is a 1972 Gran Torino he keeps in mint condition. When his neighbor Thao, a young Hmong teenager under pressure from his gang member cousin, tries to steal his Gran Torino, Kowalski sets out to reform the youth. Drawn against his will into the life of Thao's family, Kowalski is soon taking steps to protect them from the gangs that infest their neighborhood.",
+      "release_date": "2008-12-09",
+      "poster_path": "/yeBc5vpEiqIAZrbVQnl833GlBEi.jpg",
+      "popularity": 27.107786,
+      "title": "Gran Torino",
+      "video": false,
+      "vote_average": 7.8,
+      "vote_count": 3753
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/4voE3EHd2f98q6A9MeT8B7JuiB3.jpg",
+      "genre_ids": [
+        28,
+        878,
+        53
+      ],
+      "id": 156717,
+      "original_language": "en",
+      "original_title": "Death Race: Inferno",
+      "overview": "Carl Lucas / Frankenstein has won four of his races and needs to win one more to win his freedom. Before his final race, Lucas and his team, car and all, are transferred to another prison where they will compete in a Death Race in the desert. Also, at the same time, Ceaser runs into a marketer who wants to franchise the Death Race program.",
+      "release_date": "2013-01-04",
+      "poster_path": "/tFm4NeFMWRc6JocSUvVLCz1gkfb.jpg",
+      "popularity": 13.375685,
+      "title": "Death Race: Inferno",
+      "video": false,
+      "vote_average": 5.4,
+      "vote_count": 260
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/wxC0fO9fkNvdLr2joeE4AypuA3s.jpg",
+      "genre_ids": [
+        53,
+        28,
+        80
+      ],
+      "id": 287948,
+      "original_language": "en",
+      "original_title": "The Transporter Refueled",
+      "overview": "The fast-paced action movie is again set in the criminal underworld in France, where Frank Martin is known as The Transporter, because he is the best driver and mercenary money can buy. In this installment, he meets Anna and they attempt to take down a group of ruthless Russian human traffickers who also have kidnapped Frank’s father.",
+      "release_date": "2015-09-03",
+      "poster_path": "/zW7oC3tucYLzu77xNbPbYjXUN4o.jpg",
+      "popularity": 12.946247,
+      "title": "The Transporter Refueled",
+      "video": false,
+      "vote_average": 5.3,
+      "vote_count": 623
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/pxlaSPleGSNI8jJZYGhXH5LdI1B.jpg",
+      "genre_ids": [
+        18
+      ],
+      "id": 60308,
+      "original_language": "en",
+      "original_title": "Moneyball",
+      "overview": "The story of Oakland Athletics general manager Billy Beane's successful attempt to put together a baseball team on a budget, by employing computer-generated analysis to draft his players.",
+      "release_date": "2011-09-22",
+      "poster_path": "/3oAa8mJJ97CH9AeGEY6vjAxqcvZ.jpg",
+      "popularity": 12.656758,
+      "title": "Moneyball",
+      "video": false,
+      "vote_average": 7.1,
+      "vote_count": 1614
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/oB8oMhq8GIQdkrmUtuHnOgJwQyP.jpg",
+      "genre_ids": [
+        35,
+        80,
+        53
+      ],
+      "id": 483,
+      "original_language": "en",
+      "original_title": "Wild at Heart",
+      "overview": "Young lovers Sailor and Lula run from the variety of weirdos that Lula's mom has hired to kill Sailor.",
+      "release_date": "1990-05-01",
+      "poster_path": "/d4fbQjSSBd4FPyAROln1skafChr.jpg",
+      "popularity": 11.542518,
+      "title": "Wild at Heart",
+      "video": false,
+      "vote_average": 6.9,
+      "vote_count": 404
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/uBuMVTfwFKhSUOHM94tSFIZM4lm.jpg",
+      "genre_ids": [
+        35,
+        18
+      ],
+      "id": 403,
+      "original_language": "en",
+      "original_title": "Driving Miss Daisy",
+      "overview": "The story of an old Jewish widow named Daisy Werthan and her relationship with her colored chauffeur Hoke. From an initial mere work relationship grew in 25 years a strong friendship between the two very different characters in a time when those types of relationships where shunned upon. Oscar winning tragic comedy with a star-studded cast and based on a play of the same name by Alfred Uhry.",
+      "release_date": "1989-12-13",
+      "poster_path": "/pSybZBTSHOrPhDjFThDE9YEhCgT.jpg",
+      "popularity": 11.448275,
+      "title": "Driving Miss Daisy",
+      "video": false,
+      "vote_average": 7,
+      "vote_count": 421
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/u2fwkirPOiYzmYgtGbInPQtpQo0.jpg",
+      "genre_ids": [
+        35,
+        18
+      ],
+      "id": 838,
+      "original_language": "en",
+      "original_title": "American Graffiti",
+      "overview": "A couple of high school graduates spend one final night cruising the strip with their buddies before they go off to college.",
+      "release_date": "1973-08-01",
+      "poster_path": "/xq8MFYQ6MLZ65mFpweqV6mCs39k.jpg",
+      "popularity": 11.225311,
+      "title": "American Graffiti",
+      "video": false,
+      "vote_average": 6.9,
+      "vote_count": 410
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/n93v4LBOeQ8206MoVSynXWRjv6o.jpg",
+      "genre_ids": [
+        99,
+        18,
+        35
+      ],
+      "id": 320006,
+      "original_language": "fa",
+      "original_title": "تاکسی",
+      "overview": "A yellow cab is driving through the vibrant and colourful streets of Tehran. Very diverse passengers enter the taxi, each candidly expressing their views while being interviewed by the driver who is no one else but the director Jafar Panahi himself. His camera placed on the dashboard of his mobile film studio captures the spirit of Iranian society through this comedic and dramatic drive…",
+      "release_date": "2015-04-15",
+      "poster_path": "/dSbVY6EmcU5jkHRSvmzFlvj9n9H.jpg",
+      "popularity": 10.776752,
+      "title": "Taxi",
+      "video": false,
+      "vote_average": 6.9,
+      "vote_count": 128
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/i27vFixWQzSGfMcUjXYziyxWLI5.jpg",
+      "genre_ids": [
+        35
+      ],
+      "id": 8859,
+      "original_language": "en",
+      "original_title": "Dude, Where's My Car?",
+      "overview": "Jesse and Chester, two bumbling stoners, wake up one morning from a night of partying and cannot remember where they parked their car. They encounter a variety of people while looking for it, including their angry girlfriends, an angry street gang, a transexual stripper, a cult of alien seeking fanatics, and aliens in human form looking for a mystical device that could save or destroy the world.",
+      "release_date": "2000-12-15",
+      "poster_path": "/3KoZiWlgvmeDYiLk9oOMpEvZThb.jpg",
+      "popularity": 10.688117,
+      "title": "Dude, Where's My Car?",
+      "video": false,
+      "vote_average": 5.3,
+      "vote_count": 635
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/5EU3ZEGUSfDzFQpHvjW4vBfGHSy.jpg",
+      "genre_ids": [
+        18
+      ],
+      "id": 65496,
+      "original_language": "fr",
+      "original_title": "Mes chères études",
+      "overview": "Laura is a 19-year-old university freshman who desperately wants to do well in school. She works a part-time job but cannot make ends meet. One evening in which she is short of funds, she answers a personal ad online by \"Joe,\" 57, who seeks a female student for \"tender moments.\" The pay is 100 euros per hour. Laura pledges to do this just once, and three days later, she goes to a hotel room with Joe. And then her spiral begins.",
+      "release_date": "2010-01-18",
+      "poster_path": "/ozKPo7l668X8yatgg4wIummpmQG.jpg",
+      "popularity": 9.861868,
+      "title": "Student Services",
+      "video": false,
+      "vote_average": 4.5,
+      "vote_count": 51
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/kOZbGxeGMJ4Y6bxv8eOadFt8QLF.jpg",
+      "genre_ids": [
+        28,
+        80,
+        18,
+        53
+      ],
+      "id": 9615,
+      "original_language": "en",
+      "original_title": "The Fast and the Furious: Tokyo Drift",
+      "overview": "In order to avoid a jail sentence, Sean Boswell heads to Tokyo to live with his military father. In a low-rent section of the city, Shaun gets caught up in the underground world of drift racing",
+      "release_date": "2006-06-03",
+      "poster_path": "/f9V0iTSYwnxW6tPIjSE7jrGC7eP.jpg",
+      "popularity": 9.377782,
+      "title": "The Fast and the Furious: Tokyo Drift",
+      "video": false,
+      "vote_average": 6.1,
+      "vote_count": 2073
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/5OCkbaGGsyOGhqjMtHIcBSs0U9L.jpg",
+      "genre_ids": [
+        35,
+        10751,
+        14
+      ],
+      "id": 14136,
+      "original_language": "en",
+      "original_title": "The Love Bug",
+      "overview": "Herbie is a car - but no ordinary car. The story follows the Volkswagen Beetle with a mind of its own from the showroom to the race track, with various close escapes in between. Three further Herbie movies were to follow.",
+      "release_date": "1968-12-22",
+      "poster_path": "/nZ1ZGuFP0okrwuGhvl7A2q3YSul.jpg",
+      "popularity": 8.933115,
+      "title": "The Love Bug",
+      "video": false,
+      "vote_average": 6.1,
+      "vote_count": 149
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/bHRboVSfqYzILQSm4o7lPG031HT.jpg",
+      "genre_ids": [
+        14,
+        10751,
+        16,
+        12
+      ],
+      "id": 11319,
+      "original_language": "en",
+      "original_title": "The Rescuers",
+      "overview": "What can two little mice possibly do to save an orphan girl who's fallen into evil hands? With a little cooperation and faith in oneself, anything is possible! As members of the mouse-run International Rescue Aid Society, Bernard and Miss Bianca respond to orphan Penny's call for help. The two mice search for clues with the help of an old cat named Rufus.",
+      "release_date": "1977-06-22",
+      "poster_path": "/49rGpB2x6AFB83SC4IBl9foRIGp.jpg",
+      "popularity": 8.815327,
+      "title": "The Rescuers",
+      "video": false,
+      "vote_average": 6.7,
+      "vote_count": 736
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/dLqfJYEqa8jdBkwNc5Nns7WKzTB.jpg",
+      "genre_ids": [
+        28,
+        12,
+        10751,
+        14,
+        878,
+        53
+      ],
+      "id": 6499,
+      "original_language": "en",
+      "original_title": "Turbo: A Power Rangers Movie",
+      "overview": "The legendary Power Rangers must stop the evil space pirate Divatox from releasing the powerful Maligore from his volcanic imprisonment on the island of Muranthias, where only the kindly wizard Lerigot has the key to release him. The hope of victory lies in the Ranger's incredible new Turbo powers and powerful Turbo Zords.",
+      "release_date": "1997-03-27",
+      "poster_path": "/8wphfcxLmA58weK9jsIsgRWBECQ.jpg",
+      "popularity": 8.670441,
+      "title": "Turbo: A Power Rangers Movie",
+      "video": false,
+      "vote_average": 4.5,
+      "vote_count": 68
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/pBgGl3GfVxs84T7ZniUAz5FMMNx.jpg",
+      "genre_ids": [
+        35,
+        10751,
+        12,
+        14,
+        10749
+      ],
+      "id": 11451,
+      "original_language": "en",
+      "original_title": "Herbie Fully Loaded",
+      "overview": "Maggie Peyton, the new owner of Number 53 - the free-wheelin' Volkswagen bug with a mind of its own - puts the car through its paces on the road to becoming a NASCAR competitor.",
+      "release_date": "2005-06-22",
+      "poster_path": "/a0zQJrWYHiUC6EzTofznsBKWzh0.jpg",
+      "popularity": 8.603569,
+      "title": "Herbie Fully Loaded",
+      "video": false,
+      "vote_average": 5.1,
+      "vote_count": 669
+    }
+  ],
+  "total_pages": 9,
+  "total_results": 164
+}
+
+Search movies
+
+https://developers.themoviedb.org/3/search/search-movies
+
+https://api.themoviedb.org/3/search/movie?api_key=a4babd56b1912e0997aac0a3561c56f1&language=en-US&query=moneyball&page=1&include_adult=true
+
+Response
+
+{
+  "page": 1,
+  "total_results": 1,
+  "total_pages": 1,
+  "results": [
+    {
+      "vote_count": 1614,
+      "id": 60308,
+      "video": false,
+      "vote_average": 7.1,
+      "title": "Moneyball",
+      "popularity": 12.656758,
+      "poster_path": "/3oAa8mJJ97CH9AeGEY6vjAxqcvZ.jpg",
+      "original_language": "en",
+      "original_title": "Moneyball",
+      "genre_ids": [
+        18
+      ],
+      "backdrop_path": "/pxlaSPleGSNI8jJZYGhXH5LdI1B.jpg",
+      "adult": false,
+      "overview": "The story of Oakland Athletics general manager Billy Beane's successful attempt to put together a baseball team on a budget, by employing computer-generated analysis to draft his players.",
+      "release_date": "2011-09-22"
+    }
+  ]
+}
+
+
+Multi Serach 
+
+https://api.themoviedb.org/3/search/multi?api_key=a4babd56b1912e0997aac0a3561c56f1&language=en-US&query=charlie%27s%20angels&page=1&include_adult=true
+
+{
+  "page": 1,
+  "total_results": 8,
+  "total_pages": 1,
+  "results": [
+    {
+      "vote_average": 5.5,
+      "vote_count": 1473,
+      "id": 4327,
+      "video": false,
+      "media_type": "movie",
+      "title": "Charlie's Angels",
+      "popularity": 23.935285,
+      "poster_path": "/eBzf9d09Vgq2HSVC4fIZm1QNQd.jpg",
+      "original_language": "en",
+      "original_title": "Charlie's Angels",
+      "genre_ids": [
+        28,
+        12,
+        35,
+        80,
+        53
+      ],
+      "backdrop_path": "/AfXk5IqMZuznjjvEkrQuzQ9A5U6.jpg",
+      "adult": false,
+      "overview": "Three women, detectives with a mysterious boss, retrieve stolen voice-ID software, using martial arts, tech skills, and sex appeal.",
+      "release_date": "2000-11-02"
+    },
+    {
+      "original_name": "Charlie's Angels",
+      "id": 3382,
+      "media_type": "tv",
+      "name": "Charlie's Angels",
+      "vote_count": 44,
+      "vote_average": 5.83,
+      "poster_path": "/fxIo4qK5nv7G3ymK8xVnOSMklQa.jpg",
+      "first_air_date": "1976-03-21",
+      "popularity": 10.653068,
+      "genre_ids": [
+        10759
+      ],
+      "original_language": "en",
+      "backdrop_path": "/9G5eEKGznrVG5FaxT4neG0CbgRx.jpg",
+      "overview": "Charlie's Angels is an American crime drama television series that aired on ABC from September 1976 to June 1981, producing five seasons and 110 episodes. The series was created by Ivan Goff and Ben Roberts and was produced by Aaron Spelling.\n\nIt plotted the adventures of three females working in a private detective agency in Los Angeles, California, and initially starred Kate Jackson, Farrah Fawcett-Majors, and Jaclyn Smith in the leading roles. David Doyle co-starred as a sidekick to the three women and John Forsythe played the voice of their boss. Later additions to the cast included Cheryl Ladd, who entered the series in season two, Shelley Hack, in season four, and Tanya Roberts, in season five.\n\nDespite mixed reviews from critics and a reputation for merely being \"Jiggle TV,\" the show enjoyed an astonishing popularity with audiences, and was a top ten hit for its first few seasons. Because later cast changes were not well-received and the public's taste changed, the show concluded a five-year run in the spring of 1981. The series continues to have a cult and pop culture following through syndication, DVD releases, and subsequent film remakes.",
+      "origin_country": [
+        "US"
+      ]
+    },
+    {
+      "original_name": "Charlie's Angels",
+      "id": 35282,
+      "media_type": "tv",
+      "name": "Charlie's Angels",
+      "vote_count": 6,
+      "vote_average": 5.58,
+      "poster_path": "/sCakMDkf6iKvUFmUk1O5izjDQHG.jpg",
+      "first_air_date": "2011-09-22",
+      "popularity": 4.270798,
+      "genre_ids": [
+        10759
+      ],
+      "original_language": "en",
+      "backdrop_path": "/qXPmFr4qTWCG4l1JNQhgr0ILWHd.jpg",
+      "overview": "Charlie's Angels is a remake developed by Alfred Gough and Miles Millar for ABC, based upon the 1976 series of the same name created by Ivan Goff and Ben Roberts. The series ran on ABC from September 22 to November 10, 2011.\n\nA remake of the original show had been in the works since 2009. Although there were going to be 13 episodes to be aired, production of Charlie's Angels ended on October 14, 2011 after airing only four episodes due to extremely poor ratings and critical reviews. It burned off three of the remaining four episodes and concluded its run on ABC on November 10, 2011. The show's critically negative reviews focused on its acting, plot, and action scenes.\n\nCharlie's Angels is currently available on DVD from Sony Pictures Home Entertainment.",
+      "origin_country": [
+        "US"
+      ]
+    },
+    {
+      "vote_average": 5.2,
+      "vote_count": 1083,
+      "id": 9471,
+      "video": false,
+      "media_type": "movie",
+      "title": "Charlie's Angels: Full Throttle",
+      "popularity": 12.216518,
+      "poster_path": "/n4cdJ0Wqxb7C0HmZbcaC4eYnkIf.jpg",
+      "original_language": "en",
+      "original_title": "Charlie's Angels: Full Throttle",
+      "genre_ids": [
+        28,
+        12,
+        35
+      ],
+      "backdrop_path": "/4KJKnwBxflXdfp1qmLEFI9CDYHy.jpg",
+      "adult": false,
+      "overview": "The Angels are charged with finding a pair of missing rings that are encoded with the personal information of members of the Witness Protection Program. As informants are killed, the ladies target a rogue agent who might be responsible.",
+      "release_date": "2003-06-27"
+    },
+    {
+      "vote_average": 8,
+      "vote_count": 3,
+      "id": 218573,
+      "video": true,
+      "media_type": "movie",
+      "title": "Not Charlie's Angels XXX",
+      "popularity": 3.544399,
+      "poster_path": "/1Up76jBQRTgsqXazQq3g2me0xQA.jpg",
+      "original_language": "en",
+      "original_title": "Not Charlie's Angels XXX",
+      "genre_ids": [
+        10770
+      ],
+      "backdrop_path": "/deWJfHloQFe7W3wxdEdi5gBZmas.jpg",
+      "adult": true,
+      "overview": "The Angels get fucked, sucked and totally banged in this fantastic porn parody of the classic television show. Director Will Ryder (Not the Bradys XXX) delivers the most entertaining porn movie of the year as beautiful horny girls come face-to-face with dangerous sex-crazed situations. Popular dancers disappear from Studio 54 and the Angels are called to investigate but they find themselves in the middle of a cocaine &amp; sex-slave trafficking operation amidst the backdrop of glamorous Studio 54 in New York. What results is a wild ride of dick sucking, ass-licking, pussy eating and hardcore fucking!",
+      "release_date": "2010-09-30"
+    },
+    {
+      "vote_average": 0,
+      "vote_count": 0,
+      "id": 458897,
+      "video": false,
+      "media_type": "movie",
+      "title": "Charlie's Angels",
+      "popularity": 1.063272,
+      "poster_path": null,
+      "original_language": "en",
+      "original_title": "Charlie's Angels",
+      "genre_ids": [],
+      "backdrop_path": null,
+      "adult": false,
+      "overview": "a Reboot of the Hit 1976 Tv Series",
+      "release_date": "2019-06-07"
+    },
+    {
+      "original_name": "Asian Charlie's Angels",
+      "id": 20383,
+      "media_type": "tv",
+      "name": "Asian Charlie's Angels",
+      "vote_count": 0,
+      "vote_average": 0,
+      "poster_path": null,
+      "first_air_date": "",
+      "popularity": 1.001333,
+      "genre_ids": [],
+      "original_language": "en",
+      "backdrop_path": null,
+      "overview": "Asian Charlie's Angels is a Taiwanese version of the successful 1970s American television show, filmed in Mandarin. Produced in 2004 and airing on ImaginAsian in the United States, the show stars Annie Wu as Annabelle, Kelly Lin as Cindy and Qu Ying as Betty. Christy Chung also appears in the film as Angie.",
+      "origin_country": []
+    },
+    {
+      "vote_average": 4,
+      "vote_count": 1,
+      "id": 45388,
+      "video": false,
+      "media_type": "movie",
+      "title": "Behind the Camera: The Unauthorized Story of 'Charlie's Angels'",
+      "popularity": 1.101409,
+      "poster_path": "/7MuVUktNHDIbTs6ayruBirzjOWq.jpg",
+      "original_language": "en",
+      "original_title": "Behind the Camera: The Unauthorized Story of 'Charlie's Angels'",
+      "genre_ids": [
+        18
+      ],
+      "backdrop_path": "/xTZtFovcGWSCOP1eA78lcRp3pKN.jpg",
+      "adult": false,
+      "overview": "A portrayal of life behind the scenes of the original Charlies Angels.",
+      "release_date": "2004-03-08"
+    }
+  ]
+}
+
+
+https://api.themoviedb.org/3/search/multi?api_key=a4babd56b1912e0997aac0a3561c56f1&language=en-US&query=jackie%20chan&page=1&include_adult=false
+
+{
+  "page": 1,
+  "total_results": 58,
+  "total_pages": 3,
+  "results": [
+    {
+      "original_name": "Jackie Chan Adventures",
+      "id": 240,
+      "media_type": "tv",
+      "name": "Jackie Chan Adventures",
+      "vote_count": 63,
+      "vote_average": 6.84,
+      "poster_path": "/cUPo0Flf854Bsa6VXwp2LsKh0ft.jpg",
+      "first_air_date": "2000-09-09",
+      "popularity": 7.597837,
+      "genre_ids": [
+        10759,
+        16,
+        35,
+        10765
+      ],
+      "original_language": "en",
+      "backdrop_path": "/zTJ4hkihzM95JHiM8EtRl0eUY5Y.jpg",
+      "overview": "Jackie Chan Adventures is an American animated television series chronicling the adventures of a fictionalized version of action film star Jackie Chan. Many of the episodes contain references to Chan's actual works. This series ran on Kids' WB! from September 9, 2000 to July 8, 2005 for a total of 95 episodes, or 5 seasons. During its run, it was also shown on Cartoon Network, and afterwards, its reruns landed on Disney XD. An Arabic translation has been airing on MBC 3 since early 2006 and a Tamil translation has been airing on Chutti TV since its launch. It also used to air on Cartoon Network in Urdu. There have been several toys and video games based on the series. Its main character designer is Jeff Matsuda.",
+      "origin_country": [
+        "US"
+      ]
+    },
+    {
+      "vote_average": 6.5,
+      "vote_count": 114,
+      "id": 9404,
+      "video": false,
+      "media_type": "movie",
+      "title": "First Strike",
+      "popularity": 10.435909,
+      "poster_path": "/iCYOG4Frby328azRDJwKgKScgp1.jpg",
+      "original_language": "cn",
+      "original_title": "警察故事4之簡單任務",
+      "genre_ids": [
+        28,
+        12,
+        35,
+        80,
+        18,
+        53
+      ],
+      "backdrop_path": "/4S6V50j660qL3vDH9IBAOs9BZg9.jpg",
+      "adult": false,
+      "overview": "Jackie Chan reprises his role as Chan Ka-Kui (also known in some versions as Jackie) yet again as a Hong Kong cop who works with Interpol to track down and arrest an illegal weapons dealer. Later Jackie realizes that things are not as simple as they appear and soon find himself a pawn of an organisation posing as Russian intelligence.",
+      "release_date": "1996-02-10"
+    },
+    {
+      "vote_average": 7.2,
+      "vote_count": 21,
+      "id": 40863,
+      "video": false,
+      "media_type": "movie",
+      "title": "Jackie Chan: My Stunts",
+      "popularity": 3.818585,
+      "poster_path": "/n8M5dCNEylA0U7yD9AxT1PwW1ds.jpg",
+      "original_language": "en",
+      "original_title": "成龍的特技",
+      "genre_ids": [
+        99
+      ],
+      "backdrop_path": "/rwx12rsuTFN1VKGeblVcaixanQQ.jpg",
+      "adult": false,
+      "overview": "Jackie Chan : My Stunts shows some of the tricks of the trade that Jackie and his stunt team utilize to perform their stunts. This is not an endless gag reel of stunts gone wrong, but an in depth look at how timing and camera placement can make or break a shot. Jackie will show you what is done to enhance fights and protect the stuntmen from getting injured. Of course, if the character you are portraying is wearing shorts and a tank top, you just have to get hurt!",
+      "release_date": "1999-03-30"
+    },
+    {
+      "popularity": 10.390457,
+      "media_type": "person",
+      "id": 18897,
+      "profile_path": "/pmKJ4sGvPQ3imzXaFnjW4Vk5Gyc.jpg",
+      "name": "Jackie Chan",
+      "known_for": [
+        {
+          "vote_average": 7,
+          "vote_count": 3909,
+          "id": 9502,
+          "video": false,
+          "media_type": "movie",
+          "title": "Kung Fu Panda",
+          "popularity": 27.88299,
+          "poster_path": "/2Paj1nufT0jeSY0G4u3RC31HIGT.jpg",
+          "original_language": "en",
+          "original_title": "Kung Fu Panda",
+          "genre_ids": [
+            12,
+            16,
+            10751,
+            35
+          ],
+          "backdrop_path": "/UJwhgwAxU42cm9XKncO9boFAEV.jpg",
+          "adult": false,
+          "overview": "When the Valley of Peace is threatened, lazy Po the panda discovers his destiny as the \"chosen one\" and trains to become a kung fu hero, but transforming the unsleek slacker into a brave warrior won't be easy. It's up to Master Shifu and the Furious Five -- Tigress, Crane, Mantis, Viper and Monkey -- to give it a try.",
+          "release_date": "2008-06-04"
+        },
+        {
+          "vote_average": 7.7,
+          "vote_count": 2605,
+          "id": 10674,
+          "video": false,
+          "media_type": "movie",
+          "title": "Mulan",
+          "popularity": 25.263542,
+          "poster_path": "/eruhq6kmjV7wopA7GjNDHrmAl89.jpg",
+          "original_language": "en",
+          "original_title": "Mulan",
+          "genre_ids": [
+            16,
+            10751,
+            12
+          ],
+          "backdrop_path": "/sYydx5Q6qxdATbrj7imghCz0KEj.jpg",
+          "adult": false,
+          "overview": "A tomboyish girl disguises herself as a young man so she can fight with the Imperial Chinese Army against the invading Huns. With help from wise-cracking dragon Mushu, Mulan just might save her country -- and win the heart of handsome Captain Li Shang.",
+          "release_date": "1998-06-18"
+        },
+        {
+          "vote_average": 6.7,
+          "vote_count": 2318,
+          "id": 49444,
+          "video": false,
+          "media_type": "movie",
+          "title": "Kung Fu Panda 2",
+          "popularity": 23.588283,
+          "poster_path": "/Fzyy2dauoKxjUzUPYYo3kJkJAW.jpg",
+          "original_language": "en",
+          "original_title": "Kung Fu Panda 2",
+          "genre_ids": [
+            16,
+            10751
+          ],
+          "backdrop_path": "/eyiE1vuizMKVu8MoZkg2xsramFl.jpg",
+          "adult": false,
+          "overview": "Po is now living his dream as The Dragon Warrior, protecting the Valley of Peace alongside his friends and fellow kung fu masters, The Furious Five - Tigress, Crane, Mantis, Viper and Monkey. But Po’s new life of awesomeness is threatened by the emergence of a formidable villain, who plans to use a secret, unstoppable weapon to conquer China and destroy kung fu. It is up to Po and The Furious Five to journey across China to face this threat and vanquish it. But how can Po stop a weapon that can stop kung fu? He must look to his past and uncover the secrets of his mysterious origins; only then will he be able to unlock the strength he needs to succeed.",
+          "release_date": "2011-05-25"
+        }
+      ],
+      "adult": false
+    },
+    {
+      "vote_average": 6.5,
+      "vote_count": 13,
+      "id": 46122,
+      "video": false,
+      "media_type": "movie",
+      "title": "Jackie Chan: My Story",
+      "popularity": 3.131633,
+      "poster_path": "/ec2O7Yt6YhMHciCji1fCrp5OZHD.jpg",
+      "original_language": "en",
+      "original_title": "成龍的傳奇",
+      "genre_ids": [
+        99
+      ],
+      "backdrop_path": "/sNH0dERyt2YHRkX0eT8rDh0I3hF.jpg",
+      "adult": false,
+      "overview": "Jackie Chan is one of the world's biggest action stars, famed for his wacky sense of humor, remarkable martial arts techniques, and willingness to perform incredible stunts without the use of doubles -- or a net. This video takes a personal look at Chan as he works on screen projects in Hollywood and Beijing and candidly discusses his life and work.",
+      "release_date": "1998-07-17"
+    },
+    {
+      "vote_average": 6.8,
+      "vote_count": 2,
+      "id": 64833,
+      "video": false,
+      "media_type": "movie",
+      "title": "Jackie Chan: Fast, Funny and Furious",
+      "popularity": 2.010463,
+      "poster_path": "/2oKBsQ3SdjGuBDDhPR31CO9qX1b.jpg",
+      "original_language": "en",
+      "original_title": "Jackie Chan: Fast, Funny and Furious",
+      "genre_ids": [
+        99
+      ],
+      "backdrop_path": null,
+      "adult": false,
+      "overview": "Not since the great Bruce Lee has a Chinese martial artist taken Hollywood by storm. Leaping out of dire poverty and obscurity, Jackie Chan has become the sensational international superstar of mayhem and merriment! This presentation of Chan's career covers his work with the legendary Bruce Lee, his struggle against typecasting in the Bruce Lee mold, and the resounding success of his breakthrough movies mixing amazing acrobatic artistry with brilliant comic ability.",
+      "release_date": "2002-12-10"
+    },
+    {
+      "vote_average": 0,
+      "vote_count": 0,
+      "id": 326080,
+      "video": false,
+      "media_type": "movie",
+      "title": "Jackie Chan: Dragon Power",
+      "popularity": 1.001649,
+      "poster_path": null,
+      "original_language": "en",
+      "original_title": "Jackie Chan: Dragon Power",
+      "genre_ids": [],
+      "backdrop_path": null,
+      "adult": false,
+      "overview": "Documentary on Jackie Chan by Channel 4 UK",
+      "release_date": "2002-01-01"
+    },
+    {
+      "vote_average": 4.3,
+      "vote_count": 20,
+      "id": 45682,
+      "video": false,
+      "media_type": "movie",
+      "title": "Looking for Jackie",
+      "popularity": 2.851573,
+      "poster_path": "/j8fR9N1PmCLAJdW5ofwqYOMaXKf.jpg",
+      "original_language": "en",
+      "original_title": "Xun zhao Cheng Long",
+      "genre_ids": [
+        28,
+        35,
+        10751
+      ],
+      "backdrop_path": "/4SKiQSbVXLppzJg5j90ymX9VCis.jpg",
+      "adult": false,
+      "overview": "Jackie Chan is the undefeated Kung Fu Master who dishes out the action in traditional Jackie Chan style. When a young boy sets out to learn how to fight from the Master himself, he not only witnesses some spectacular fights, but learns some important life lessons along the way.",
+      "release_date": "2009-07-03"
+    },
+    {
+      "vote_average": 5.5,
+      "vote_count": 2,
+      "id": 384357,
+      "video": true,
+      "media_type": "movie",
+      "title": "Jackie Chan - Seine spektakulärsten Kämpfe",
+      "popularity": 1.16598,
+      "poster_path": "/3egKMF9yT3pHyrk4n5d0S7C9T9z.jpg",
+      "original_language": "de",
+      "original_title": "Jackie Chan - Seine spektakulärsten Kämpfe",
+      "genre_ids": [
+        99
+      ],
+      "backdrop_path": null,
+      "adult": false,
+      "overview": "",
+      "release_date": "2009-07-30"
+    },
+    {
+      "vote_average": 6.6,
+      "vote_count": 277,
+      "id": 33542,
+      "video": false,
+      "media_type": "movie",
+      "title": "Rumble in the Bronx",
+      "popularity": 12.053261,
+      "poster_path": "/y7AxKPPCtZyrGQKvxzn5zTQ8wFm.jpg",
+      "original_language": "cn",
+      "original_title": "紅番區",
+      "genre_ids": [
+        80,
+        28,
+        35,
+        53
+      ],
+      "backdrop_path": "/rGeVEsRDVvlMBN7fmOKhNW2GtWy.jpg",
+      "adult": false,
+      "overview": "Keong comes from Hong Kong to visit New York for his uncle's wedding. His uncle runs a market in the Bronx and Keong offers to help out while Uncle is on his honeymoon. During his stay in the Bronx, Keong befriends a neighbor kid and beats up some neighborhood thugs who cause problems at the market. One of those petty thugs in the local gang stumbles into a criminal situation way over his head.",
+      "release_date": "1995-01-30"
+    },
+    {
+      "vote_average": 0,
+      "vote_count": 0,
+      "id": 415965,
+      "video": false,
+      "media_type": "movie",
+      "title": "Jackie Chan - Invincible Fighter",
+      "popularity": 1.000154,
+      "poster_path": "/hstkzLXWXBsUOYfoPgMhscH7SSt.jpg",
+      "original_language": "cn",
+      "original_title": "Jackie Chan - Invincible Fighter",
+      "genre_ids": [
+        99
+      ],
+      "backdrop_path": null,
+      "adult": false,
+      "overview": "Invincible Fighter is a documentary on Jackie Chan",
+      "release_date": "1985-01-01"
+    },
+    {
+      "vote_average": 6,
+      "vote_count": 93,
+      "id": 10951,
+      "video": false,
+      "media_type": "movie",
+      "title": "Gorgeous",
+      "popularity": 7.894465,
+      "poster_path": "/6mjpgh551XiXQf8Sgk4bD0PW4o9.jpg",
+      "original_language": "cn",
+      "original_title": "琉璃樽",
+      "genre_ids": [
+        12,
+        28,
+        35,
+        10749
+      ],
+      "backdrop_path": "/qAXF1oIdycfhurxRTFzrfdOJv1E.jpg",
+      "adult": false,
+      "overview": "When Ah Bu, a girl from a small fishing town in Taiwan, finds a glass bottle with a romantic message, she travels to Hong Kong to find her prince charming. As it turns out, her prince charming, Albert, happens to be gay. But all is not lost when Ah Bu meets the dashing Chi Wu. Meanwhile, Ah Bu's boyfriend from Taiwan comes looking for her, as the action and romance follow Ah Bu back to Taiwan.",
+      "release_date": "1999-02-12"
+    },
+    {
+      "vote_average": 7,
+      "vote_count": 45,
+      "id": 11563,
+      "video": false,
+      "media_type": "movie",
+      "title": "The Young Master",
+      "popularity": 5.412552,
+      "poster_path": "/fE3qMzV5VJD47BjV3nFOKWYSiCc.jpg",
+      "original_language": "en",
+      "original_title": "師弟出馬",
+      "genre_ids": [
+        28,
+        35
+      ],
+      "backdrop_path": "/28YB2SlgIkVqAqSCVtQwrsq9v67.jpg",
+      "adult": false,
+      "overview": "Youthful martial arts master Lung is searching for his missing brother, when he is mistaken for a criminal on the run.  He must prove his innocence by solving the case himself, while local lawmen and merciless mercenaries are hot on his trail.",
+      "release_date": "1980-02-09"
+    },
+    {
+      "vote_average": 4.7,
+      "vote_count": 27,
+      "id": 10257,
+      "video": false,
+      "media_type": "movie",
+      "title": "The Twins Effect II",
+      "popularity": 5.069567,
+      "poster_path": "/gCttgKTY6aQ1TzCxARMyGjw4Ha1.jpg",
+      "original_language": "cn",
+      "original_title": "Chin Kei Bin 2 - Fa Tou Tai Kam",
+      "genre_ids": [
+        12,
+        28,
+        35,
+        878
+      ],
+      "backdrop_path": "/oEMZnRm6tbaOO9REYymkOCAa5pv.jpg",
+      "adult": false,
+      "overview": "In the mythical land of Huadu, Charcoal Head, a humble boy born to rule an empire must undertake his journey to claim his throne.",
+      "release_date": "2004-08-12"
+    },
+    {
+      "vote_average": 8.5,
+      "vote_count": 2,
+      "id": 468299,
+      "video": false,
+      "media_type": "movie",
+      "title": "Jackie Chan - From Stuntman to Superstar",
+      "popularity": 1.154538,
+      "poster_path": "/iVRYqQeud5Qonn2CPFMkqkGBEPS.jpg",
+      "original_language": "en",
+      "original_title": "Jackie Chan - From Stuntman to Superstar",
+      "genre_ids": [
+        99
+      ],
+      "backdrop_path": null,
+      "adult": false,
+      "overview": "Jackie Chan - From Stuntman to Superstar is a documentary on Jackie Chan.",
+      "release_date": "1996-08-30"
+    },
+    {
+      "vote_average": 6.7,
+      "vote_count": 3,
+      "id": 50152,
+      "video": false,
+      "media_type": "movie",
+      "title": "Traces of a Dragon: Jackie Chan & His Lost Family",
+      "popularity": 1.406175,
+      "poster_path": "/fG9k7e7LuvIEgzOLNuwkYejWYYb.jpg",
+      "original_language": "zh",
+      "original_title": "Traces of a Dragon: Jackie Chan & His Lost Family",
+      "genre_ids": [
+        99
+      ],
+      "backdrop_path": "/6IlrUX408KdMDrxslnivTzLJY5S.jpg",
+      "adult": false,
+      "overview": "A surprising look at the past of movie star Jackie Chan and the difficulties of Chinese families during the Culture Revolution.",
+      "release_date": "2003-08-22"
+    },
+    {
+      "vote_average": 7.1,
+      "vote_count": 104,
+      "id": 21519,
+      "video": false,
+      "media_type": "movie",
+      "title": "Project A",
+      "popularity": 12.047624,
+      "poster_path": "/aiEtQitm0pbRC93ABsrHhw9HhMR.jpg",
+      "original_language": "cn",
+      "original_title": "A計劃",
+      "genre_ids": [
+        28,
+        35
+      ],
+      "backdrop_path": "/tuAMryZ4tZZ4LOMvXSANCcLEoWM.jpg",
+      "adult": false,
+      "overview": "In late 19th Century Hong Kong the British may rule the land, but the pirates rule the waters. One Coast Guard officer is Dragon Ma, who is determined that his beloved Coast Guard will not be made a fool of.",
+      "release_date": "1983-12-22"
+    },
+    {
+      "vote_average": 0,
+      "vote_count": 0,
+      "id": 468285,
+      "video": false,
+      "media_type": "movie",
+      "title": "Jackie Chan - The Kung Fu Years",
+      "popularity": 1.001189,
+      "poster_path": "/jkafbXkDPpS9rinP3mUVauIG9Z.jpg",
+      "original_language": "en",
+      "original_title": "Jackie Chan - The Kung Fu Years",
+      "genre_ids": [
+        99
+      ],
+      "backdrop_path": null,
+      "adult": false,
+      "overview": "Jackie Chan - The Kung Fu Years is a documentary produced by video label Eastern Heroes",
+      "release_date": "2000-04-17"
+    },
+    {
+      "vote_average": 0,
+      "vote_count": 0,
+      "id": 493226,
+      "video": false,
+      "media_type": "movie",
+      "title": "Jackie Chan's Global Friendship Tour",
+      "popularity": 1.027076,
+      "poster_path": "/6oYj2niQFO3wgH7762eP50e7Dp0.jpg",
+      "original_language": "en",
+      "original_title": "Jackie Chan's Global Friendship Tour",
+      "genre_ids": [
+        99
+      ],
+      "backdrop_path": null,
+      "adult": false,
+      "overview": "Jackie Chan's Global Friendship Tour is a Jackie Chan Documentary",
+      "release_date": "2006-05-01"
+    },
+    {
+      "vote_average": 0,
+      "vote_count": 0,
+      "id": 374699,
+      "video": true,
+      "media_type": "movie",
+      "title": "Jackie Chan's Hong Kong Tour",
+      "popularity": 1.002709,
+      "poster_path": "/hlv18qCZqteB3JvZPhl02Dc9OBQ.jpg",
+      "original_language": "en",
+      "original_title": "Jackie Chan's Hong Kong Tour",
+      "genre_ids": [
+        99
+      ],
+      "backdrop_path": "/qTBG4cWn6H4PAfOdUDkDtub7SvL.jpg",
+      "adult": false,
+      "overview": "",
+      "release_date": "2001-01-01"
+    }
+  ]
+}
+
+Search Person 
+
+https://api.themoviedb.org/3/search/person?api_key=a4babd56b1912e0997aac0a3561c56f1&language=en-US&query=jennifer%20aniston&page=1&include_adult=false
+
+{
+  "page": 1,
+  "total_results": 1,
+  "total_pages": 1,
+  "results": [
+    {
+      "popularity": 10.236274,
+      "id": 4491,
+      "profile_path": "/4d4wvNyDuvN86DoneawbLOpr8gH.jpg",
+      "name": "Jennifer Aniston",
+      "known_for": [
+        {
+          "vote_average": 6.5,
+          "vote_count": 3766,
+          "id": 310,
+          "video": false,
+          "media_type": "movie",
+          "title": "Bruce Almighty",
+          "popularity": 34.682588,
+          "poster_path": "/lgYKHifMMLT8OxYObMKa8b4STsr.jpg",
+          "original_language": "en",
+          "original_title": "Bruce Almighty",
+          "genre_ids": [
+            14,
+            35
+          ],
+          "backdrop_path": "/wH8vtnsmU4olFJ5wSRHo8RXRhKF.jpg",
+          "adult": false,
+          "overview": "Bruce Nolan toils as a \"human interest\" television reporter in Buffalo, N.Y. Despite his high ratings and the love of his beautiful girlfriend, Grace, Bruce remains unfulfilled. At the end of the worst day in his life, he angrily ridicules God -- and the Almighty responds, endowing Bruce with all of His divine powers.",
+          "release_date": "2003-05-23"
+        },
+        {
+          "vote_average": 6.8,
+          "vote_count": 3506,
+          "id": 138832,
+          "video": false,
+          "media_type": "movie",
+          "title": "We're the Millers",
+          "popularity": 31.438225,
+          "poster_path": "/digXuLXmk88Ar23LYUQTLcz5npA.jpg",
+          "original_language": "en",
+          "original_title": "We're the Millers",
+          "genre_ids": [
+            35,
+            80
+          ],
+          "backdrop_path": "/zq1jEtJCszbQPFMt65QEsjIRTft.jpg",
+          "adult": false,
+          "overview": "A veteran pot dealer creates a fake family as part of his plan to move a huge shipment of weed into the U.S. from Mexico.",
+          "release_date": "2013-08-07"
+        },
+        {
+          "vote_average": 6.5,
+          "vote_count": 2679,
+          "id": 51540,
+          "video": false,
+          "media_type": "movie",
+          "title": "Horrible Bosses",
+          "popularity": 25.483155,
+          "poster_path": "/17rVRW7ond0PR2KJHY0xY00isTB.jpg",
+          "original_language": "en",
+          "original_title": "Horrible Bosses",
+          "genre_ids": [
+            35,
+            80
+          ],
+          "backdrop_path": "/1iVZJmeHW8MVMq7xlaHgLSv6qrc.jpg",
+          "adult": false,
+          "overview": "For Nick, Kurt and Dale, the only thing that would make the daily grind more tolerable would be to grind their intolerable bosses into dust. Quitting is not an option, so, with the benefit of a few-too-many drinks and some dubious advice from a hustling ex-con, the three friends devise a convoluted and seemingly foolproof plan to rid themselves of their respective employers... permanently.",
+          "release_date": "2011-07-08"
+        }
+      ],
+      "adult": false
+    }
+  ]
+}
+
+Search Tv Shows
+
+https://api.themoviedb.org/3/search/tv?api_key=a4babd56b1912e0997aac0a3561c56f1&language=en-US&query=riverdale&page=1
+
+Response
+
+{
+  "page": 1,
+  "total_results": 2,
+  "total_pages": 1,
+  "results": [
+    {
+      "original_name": "Riverdale",
+      "id": 69050,
+      "name": "Riverdale",
+      "vote_count": 185,
+      "vote_average": 7.15,
+      "poster_path": "/1TsbOTztAJtzTRXAhoLsX9a83XX.jpg",
+      "first_air_date": "2017-01-26",
+      "popularity": 67.080935,
+      "genre_ids": [
+        18,
+        9648
+      ],
+      "original_language": "en",
+      "backdrop_path": "/2IUpoKSP64r6rp2vBo0Fdk8a1UU.jpg",
+      "overview": "Set in the present, the series offers a bold, subversive take on Archie, Betty, Veronica and their friends, exploring the surreality of small-town life, the darkness and weirdness bubbling beneath Riverdale’s wholesome facade.",
+      "origin_country": [
+        "US"
+      ]
+    },
+    {
+      "original_name": "Riverdale",
+      "id": 10298,
+      "name": "Riverdale",
+      "vote_count": 0,
+      "vote_average": 0,
+      "poster_path": null,
+      "first_air_date": "1997-09-22",
+      "popularity": 4.133066,
+      "genre_ids": [
+        10766,
+        18
+      ],
+      "original_language": "en",
+      "backdrop_path": null,
+      "overview": "CBC’s first prime time soap opera follows the intertwined lives of four families in Toronto’s Riverdale community.",
+      "origin_country": [
+        "CA"
+      ]
+    }
+  ]
+}
+
+Details about Tv and many other :
+Visit below url
+
+https://developers.themoviedb.org/3/tv/get-tv-details
+
+https://api.themoviedb.org/3/tv/69050?api_key=a4babd56b1912e0997aac0a3561c56f1&language=en-US&append_to_response=videos%2Cimages
+
+here id will be obtained from search tv.
+
+Response
+
+{
+  "backdrop_path": "/2IUpoKSP64r6rp2vBo0Fdk8a1UU.jpg",
+  "created_by": [
+    {
+      "id": 1098032,
+      "name": "Roberto Aguirre-Sacasa",
+      "gender": 0,
+      "profile_path": "/PtJSrAk7LDqaV5jExCYl10lcsN.jpg"
+    }
+  ],
+  "episode_run_time": [
+    45
+  ],
+  "first_air_date": "2017-01-26",
+  "genres": [
+    {
+      "id": 18,
+      "name": "Drama"
+    },
+    {
+      "id": 9648,
+      "name": "Mystery"
+    }
+  ],
+  "homepage": "http://www.cwtv.com/shows/riverdale/",
+  "id": 69050,
+  "in_production": true,
+  "languages": [
+    "en",
+    "pl"
+  ],
+  "last_air_date": "2018-02-07",
+  "name": "Riverdale",
+  "networks": [
+    {
+      "id": 71,
+      "name": "The CW"
+    }
+  ],
+  "number_of_episodes": 26,
+  "number_of_seasons": 2,
+  "origin_country": [
+    "US"
+  ],
+  "original_language": "en",
+  "original_name": "Riverdale",
+  "overview": "Set in the present, the series offers a bold, subversive take on Archie, Betty, Veronica and their friends, exploring the surreality of small-town life, the darkness and weirdness bubbling beneath Riverdale’s wholesome facade.",
+  "popularity": 66.080935,
+  "poster_path": "/1TsbOTztAJtzTRXAhoLsX9a83XX.jpg",
+  "production_companies": [
+    {
+      "name": "Warner Bros. Television",
+      "id": 1957
+    },
+    {
+      "name": "Berlanti Productions",
+      "id": 27711
+    }
+  ],
+  "seasons": [
+    {
+      "air_date": "2017-01-26",
+      "episode_count": 13,
+      "id": 82752,
+      "poster_path": "/iyLxqUGwOUurAKMOR8hSXmxMISU.jpg",
+      "season_number": 1
+    },
+    {
+      "air_date": "2017-10-12",
+      "episode_count": 13,
+      "id": 91793,
+      "poster_path": "/yrsTz3PAUyKmLaNxvNOGX9alubu.jpg",
+      "season_number": 2
+    }
+  ],
+  "status": "Returning Series",
+  "type": "Scripted",
+  "vote_average": 7.1,
+  "vote_count": 187,
+  "videos": {
+    "results": [
+      {
+        "id": "5892ead89251416ee300269d",
+        "iso_639_1": "en",
+        "iso_3166_1": "US",
+        "key": "9XmFTADupMc",
+        "name": "Riverdale (The CW) Trailer HD",
+        "site": "YouTube",
+        "size": 720,
+        "type": "Trailer"
+      }
+    ]
+  },
+  "images": {
+    "backdrops": [],
+    "posters": []
+  }
+}
+
+Similarly for tv seasons and tv episodes.
+
+tv seasons id is obtained from tv details.
+tv id = 69050 obtained from search
+from above json tv season id = 82752
+
+To get details about any episode you needs
+
+1) tv_id.
+
+Obtained from url like 
+
+https://api.themoviedb.org/3/search/tv?api_key=a4babd56b1912e0997aac0a3561c56f1&language=en-US&query=riverdale&page=1
+
+from here id = 69050.
+
+Now get info about this tv show from 
+
+https://api.themoviedb.org/3/tv/69050?api_key=a4babd56b1912e0997aac0a3561c56f1&language=en-US&append_to_response=videos%2Cimages
+
+here you will get season number and season id.
+suppose season id = 82752
+
+/tv/{tv_id}/season/{season_number}
+
+
+https://api.themoviedb.org/3/tv/69050/season/1?api_key=a4babd56b1912e0997aac0a3561c56f1&language=en-US
+
+
+episode Details
+
+episode number obtained from querying 
+https://api.themoviedb.org/3/tv/69050/season/1/episode/1?api_key=a4babd56b1912e0997aac0a3561c56f1&language=en-US&append_to_response=videos
+
+
+To play videos you will get a key like 9XmFTADupMc
+
+so to play that video we need to append the url 
+https://www.youtube.com/watch?v=
+
+and to embed we will use
+
+https://www.youtube.com/embed/9XmFTADupMc
